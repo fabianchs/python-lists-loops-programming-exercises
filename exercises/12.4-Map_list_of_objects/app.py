@@ -16,5 +16,7 @@ def calculateAge(birthDate):
     return age
 
 name_list = list(map(lambda person:  person["name"] , people))
-print(name_list)
+ages_list= list(map(calculateAge,people["birthDate"]))
+
+print(name_list, ages_list)
 
