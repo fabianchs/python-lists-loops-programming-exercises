@@ -7,3 +7,10 @@ names = ['Liam','Emma','Noah','Olivia','William','Ava','James','Isabella','Logan
 
 
 #Your code go here:
+
+def separate(names):
+    if "am" in names:
+        return names
+
+result= list(filter(separate,names))
+print(result)

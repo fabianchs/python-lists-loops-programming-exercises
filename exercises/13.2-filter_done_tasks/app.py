@@ -13,3 +13,8 @@ tasks = [
 
 #Your code go here:
 
+def separateDone(tasks):
+    return tasks["done"]==True
+
+result= list(filter(separateDone,tasks))
+print(result)

@@ -10,13 +10,17 @@ people = [
 ]
 
 
-def calculateAge(birthDate):
+def calculateAge(people):
+    birthDate= people["birthDate"]
     today = datetime.date.today()
     age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
     return age
 
 name_list = list(map(lambda person:  person["name"] , people))
-ages_list= list(map(calculateAge,people["birthDate"]))
+ages_list= list(map(calculateAge, people))
+final_list=[]
+for i in range(0, len(name_list),1):
+    final_list.append("Hello, my name is "+name_list[i]+" and I am "+str(ages_list[i])+" years old")
 
-print(name_list, ages_list)
+print(final_list)
 
